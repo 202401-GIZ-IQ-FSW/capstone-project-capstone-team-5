@@ -10,11 +10,13 @@ router.post("/employers", employerController.create);
 router.put("/employer/:id", employerController.update);
 router.delete("/employers/:id", employerController.delete);
 
+router.get("/job/:id", jobController.findById);
 router.get("/jobs", jobController.all);
 router.post("/jobs", jobController.create);
 router.put("/job/:id", jobController.update);
 router.delete("/jobs/:id", jobController.delete);
 
+router.get("/user/:id", userController.findById);
 router.get("/users", userController.all);
 router.post("/users", userController.create);
 router.put("/user/:id", userController.update);

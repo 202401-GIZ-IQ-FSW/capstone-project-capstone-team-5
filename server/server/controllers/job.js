@@ -12,6 +12,20 @@ jobController.all = async (req, res) => {
   }
 };
 
+// Get a job by id
+jobController.findById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const job = await Job.findById(id);
+    if (!job) {
+      return res.status(404).json({ message: "Job not found" });
+    }
+    res.status(200).json(job);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 // Create new job
 jobController.create = async (req, res) => {
   try {

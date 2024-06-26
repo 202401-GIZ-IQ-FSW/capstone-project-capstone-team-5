@@ -22,7 +22,7 @@ app.get("/test", (req, res) => {
   );
 });
 
-app.use("/", router);
+app.use("/api", router);
 
 module.exports = app;
 app.listen(port, () => {
