@@ -72,10 +72,11 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
+                <Image
+                  src="/logo.png"
+                  width={160}
+                  height={120}
+                  alt="Picture of the author"
                 />
               </a>
               <button
@@ -114,14 +115,9 @@ export default function Hero() {
         </Dialog>
       </header>
 
-      <div className="relative px-6 pt-14 lg:px-8">
+      <div className="relative px-6 pt-20 lg:px-8">
         <div className="flex justify-center pt-12">
-          <Image
-            src="/heroimage.png"
-            width={500}
-            height={500}
-            alt="Picture of the author"
-          />
+          <Image src="/heroimage.png" width={500} height={500} />
         </div>
         <div className="mx-auto max-w-2xl pt-6 pb-32 sm:pb-48 lg:pb-56">
           <div className="text-center">

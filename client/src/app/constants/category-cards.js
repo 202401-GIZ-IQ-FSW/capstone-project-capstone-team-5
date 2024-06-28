@@ -12,7 +12,7 @@ export const Cards = [
   {
     name: "IT Services",
     listing: "1,720 job listings",
-    imageUrl: "./IT.png",
+    imageUrl: "./program.png",
   },
   {
     name: "Tech",
