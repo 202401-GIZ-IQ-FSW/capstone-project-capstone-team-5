@@ -1,5 +1,5 @@
-import { AdvanceYourCareerCards } from "@/app/constants/advance-your-career-cards";
-import { AdvanceYourCareerCardsBottom } from "@/app/constants/advance-your-career-cards-bottom";
+import { AdvanceYourCareerCards } from "@/constants/advance-your-career-cards";
+import { AdvanceYourCareerCardsBottom } from "@/constants/advance-your-career-cards-bottom";
 import AdvanceYourCareerCard from "./advance-your-career-card";
 import AdvanceYourCareerCardBottom from "./advance-your-career-card-bottom";
 

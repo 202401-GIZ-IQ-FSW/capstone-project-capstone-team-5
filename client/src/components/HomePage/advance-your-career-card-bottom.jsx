@@ -1,4 +1,4 @@
-import { AdvanceYourCareerCardsBottom } from "@/app/constants/advance-your-career-cards-bottom";
+import { AdvanceYourCareerCardsBottom } from "@/constants/advance-your-career-cards-bottom";
 
 function AdvanceYourCareerCardBottom(props) {
   return (

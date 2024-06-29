@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Nav from "../Common/navbar";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -12,13 +11,57 @@ const navigation = [
   { name: "Search", href: "/search" },
 ];
 
-export default function Hero() {
+export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
-        <Nav />
+        <nav
+          className="flex items-center justify-between p-4 lg:px-8 bg-[#80e6ff]"
+          aria-label="Global"
+        >
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+            </a>
+            <Image
+              src="/logo.png"
+              width={160}
+              height={120}
+              alt="Picture of the author"
+            />
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-md font-medium leading-6 text-black hover:text-[#f1ff52] hover:font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              className="text-md font-semibold leading-6 text-black hover:text-[#f1ff52]"
+            >
+              Sign in <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </nav>
         <div className=" border-black border-[1px]"></div>
         <Dialog
           className="lg:hidden"
@@ -72,29 +115,6 @@ export default function Hero() {
           </DialogPanel>
         </Dialog>
       </header>
-
-      <div className="relative px-6 pt-20 lg:px-8">
-        <div className="flex justify-center pt-12">
-          <Image src="/heroimage.png" width={500} height={500} />
-        </div>
-        <div className="mx-auto max-w-2xl pt-6 pb-32 sm:pb-48 lg:pb-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Discover over 5,000 job opportunities
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Connect with top companies, find skilled professionals
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <input
-                className="h-10  placeholder:text-sm lg:placeholder:text-lg w-[240px] lg:w-[800px] bg-white px-4 py-6 rounded-md placeholder:text-black border-black border-2  outline-[#7ad6ea]"
-                type="text"
-                placeholder="What job are you seeking?"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

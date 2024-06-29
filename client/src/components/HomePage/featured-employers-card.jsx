@@ -1,4 +1,4 @@
-import { FeaturedEmployersCards } from "@/app/constants/featured-employer-cards";
+import { FeaturedEmployersCards } from "@/constants/featured-employer-cards";
 
 function FeaturedEmployersCard(props) {
   return (

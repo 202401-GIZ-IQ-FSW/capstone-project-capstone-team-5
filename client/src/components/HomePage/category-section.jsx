@@ -1,4 +1,4 @@
-import { Cards } from "@/app/constants/category-cards";
+import { Cards } from "@/constants/category-cards";
 import CategoryCard from "./category-card";
 
 function CategorySection() {
