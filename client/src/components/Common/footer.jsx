@@ -18,51 +18,69 @@ export default function Footer() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div className="font-heading font-[300]">
-              <h2 className="mb-6 text-sm  text-gray-300 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
                 Edit Profile
               </h2>
               <ul className="text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
                     Account Details
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
                     Job Opportunities
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
                     Contact Support
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
                     Company News
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="font-heading font-[300]">
-              <h2 className="mb-6 text-sm  text-gray-300 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
                 Community
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400">
+              <ul className="text-gray-500 dark:text-gray-400 ">
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52] "
+                  >
                     Support Center
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
+                  <Link
+                    href="/"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
                     Upgrade to Premium
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="font-heading font-[300]">
-              <h2 className="mb-6 text-sm  text-gray-300 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
                 Our Team Members
               </h2>
               <ul className="text-gray-500 dark:text-gray-400">
@@ -70,7 +88,7 @@ export default function Footer() {
                   Shkar Ghareeb
                   <a
                     href="https://github.com/Shcare"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#f1ff52] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -89,7 +107,7 @@ export default function Footer() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/shcar/"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#80e6ff] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -106,7 +124,7 @@ export default function Footer() {
                   Aween Ezzat
                   <a
                     href="https://github.com/AweenEzzat"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#f1ff52] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -125,7 +143,7 @@ export default function Footer() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/aween-ezzat-/"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#80e6ff] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -142,7 +160,7 @@ export default function Footer() {
                   Barham Bapir
                   <a
                     href="https://github.com/BarhamBapirAhmad"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#f1ff52] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -160,8 +178,8 @@ export default function Footer() {
                     <span className="sr-only">GitHub account</span>
                   </a>
                   <a
-                    href="https://github.com/BarhamBapirAhmad"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    href="https://www.linkedin.com/in/barham-bapir-878b28290/"
+                    className="text-gray-500 hover:text-[#80e6ff] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -169,10 +187,6 @@ export default function Footer() {
                       viewBox="0 0 448 512"
                       fill="currentColor"
                     >
-                      <a
-                        href="https://www.linkedin.com/in/barham-bapir-878b28290/"
-                        className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
-                      ></a>
                       <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
                     </svg>
                     <span className="sr-only">Linkedin account</span>
@@ -182,7 +196,7 @@ export default function Footer() {
                   Sarah Mustafa
                   <a
                     href="https://github.com/Leorahx"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#f1ff52] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -201,7 +215,7 @@ export default function Footer() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/leorahx/"
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-2"
+                    className="text-gray-500 hover:text-[#80e6ff] dark:hover:text-white ms-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -221,7 +235,10 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{" "}
-            <a href="https://www.re-coded.com/" className="hover:underline">
+            <a
+              href="https://www.re-coded.com/"
+              className="hover:underline hover:text-[#80e6ff]"
+            >
               Re:Coded Fullstack Web Development Bootcamp Capstone Project
             </a>
           </span>
