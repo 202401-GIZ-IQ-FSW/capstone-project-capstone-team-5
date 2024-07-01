@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-// const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
+
+const SALT_WORK_FACTOR = 10;
 
 const userSchema = new mongoose.Schema({
   firstName: {
@@ -25,6 +27,7 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    minlength: 8,
   },
   userType: {
     type: String,
@@ -32,13 +35,23 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// We have to hash the password before saving the user
-// userSchema.pre("save", async function (next) {
-//   if (!this.isModified("password")) return next();
-//   const salt = await bcrypt.genSalt(10);
-//   this.password = await bcrypt.hash(this.password, salt);
+// Hash password before saving the user
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
 
-//   next();
-// });
+  try {
+    const salt = await bcrypt.genSalt(SALT_WORK_FACTOR);
+    const hash = await bcrypt.hash(this.password, salt);
+    this.password = hash;
+    next();
+  } catch (error) {
+    return next(error);
+  }
+});
+
+// Add a method to compare hashed password with user input
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  return await bcrypt.compare(candidatePassword, this.password);
+};
 
 module.exports = mongoose.model("User", userSchema);
