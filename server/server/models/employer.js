@@ -6,11 +6,21 @@ const employerSchema = new Schema({
     type: String,
     required: true,
     trim: true,
+    minlength: 3,
+    maxlength: 50,
   },
   website: {
     type: String,
     required: true,
     trim: true,
+    validate: {
+      // Custom validation for website format
+      validator: (value) => {
+        const urlRegex = /^((https?|ftp):\/\/)?[^\s]+/; // Basic URL format check
+        return urlRegex.test(value);
+      },
+      message: (props) => `${props.value} is not a valid website URL!`,
+    },
   },
   industry: {
     type: String,

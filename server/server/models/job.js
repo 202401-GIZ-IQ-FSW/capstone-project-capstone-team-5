@@ -5,6 +5,9 @@ const jobSchema = new Schema({
   title: {
     type: String,
     required: true,
+    trim: true,
+    minlength: 3,
+    maxlength: 100,
   },
   company: {
     type: String,
@@ -31,6 +34,10 @@ const jobSchema = new Schema({
   datePosted: {
     type: Date,
     default: Date.now,
+    validate: {
+      validator: (v) => v <= Date.now(),
+      message: "Date posted can not be in the future",
+    },
   },
 });
 
