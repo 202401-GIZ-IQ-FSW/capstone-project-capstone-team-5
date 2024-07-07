@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Browse", href: "/browse" },
-  { name: "Post Job", href: "/post-job" },
-  { name: "Search", href: "/search" },
+ const navigation = [
+  { name: "Home",href: "/" },
+  { name: "Browse",href: "/browse" },
+  { name: "Post Job",href: "/post-job" },
+  { name: "Search",href: "/search" },
+  { name: 'Profile',href: '/profile' },//Ensure href matches the path for Profile
 ];
-
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -116,6 +115,6 @@ export default function Nav() {
           </DialogPanel>
         </Dialog>
       </header>
-    </div>
+     </div>
   );
 }
