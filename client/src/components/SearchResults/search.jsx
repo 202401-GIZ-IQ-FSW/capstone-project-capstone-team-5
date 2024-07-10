@@ -1,4 +1,13 @@
-export default function Search() {
+"use client";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+
+export default function Search(props) {
+  const searchParams = useSearchParams();
+  const category = searchParams.get("category");
+
+  const router = useRouter();
+
   return (
     <div className="bg-white pt-16 sm:pt-24 lg:pt-32">
       <div className="mx-auto mt-6 grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
@@ -23,28 +32,95 @@ export default function Search() {
       </div>
       <div>
         <div className="grid grid-cols-2 lg:grid-cols-8 items-center justify-center p-8 lg:px-36 gap-3">
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
-            Logistics
+          <button
+            onClick={() => {
+              window.location.href = "?category=AllJobs";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "AllJobs" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
+            All Jobs
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
+          <button
+            onClick={() => {
+              window.location.href = "?category=Sales";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Sales" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
             Sales
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
+          <button
+            onClick={() => {
+              window.location.href = "?category=Marketing";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Marketing" ? " bg-[#f1ff52] text-black" : " ")
+            }
+          >
             Marketing
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
-            Technology
+          <button
+            onClick={() => {
+              window.location.href = "?category=Finance";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Finance" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
+            Finance
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
-            Remote Jobs
-          </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
+
+          <button
+            onClick={() => {
+              window.location.href = "?category=Hospitality";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Hospitality"
+                ? " bg-[#f1ff52] text-black"
+                : "")
+            }
+          >
             Hospitality
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
-            Sales
+          <button
+            onClick={() => {
+              window.location.href = "?category=ITServices";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "ITServices" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
+            IT Services
           </button>
-          <button className=" rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3">
+          <button
+            onClick={() => {
+              window.location.href = "?category=Tech";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Tech" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
+            Tech
+          </button>
+          <button
+            onClick={() => {
+              window.location.href = "?category=Science";
+            }}
+            className={
+              "rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-[1px] transition-all font-light px-4 py-1 h-8 items-center leading-3" +
+              (props.category == "Science" ? " bg-[#f1ff52] text-black" : "")
+            }
+          >
             Science
           </button>
         </div>

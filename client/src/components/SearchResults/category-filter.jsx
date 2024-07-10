@@ -173,7 +173,7 @@ export default function CategoryFilter() {
         <div className="border-b border-black bg-white pb-4">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <Menu as="div" className="relative inline-block text-left">
-              <div>
+              {/* <div>
                 <MenuButton className="group inline-flex justify-center text-sm font-medium text-black">
                   Sort
                   <ChevronDownIcon
@@ -181,7 +181,7 @@ export default function CategoryFilter() {
                     aria-hidden="true"
                   />
                 </MenuButton>
-              </div>
+              </div> */}
 
               <MenuItems
                 transition
@@ -218,7 +218,7 @@ export default function CategoryFilter() {
               Filters
             </button>
 
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <div className="flow-root">
                 <PopoverGroup className="-mx-4 flex items-center divide-x divide-gray-200">
                   {filters.map((section, sectionIdx) => (
@@ -266,14 +266,14 @@ export default function CategoryFilter() {
                     </Popover>
                   ))}
                 </PopoverGroup>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
 
         {/* Active filters */}
         <div></div>
-        <div className="bg-[#f5f3f3]">
+        {/* <div className="bg-[#f5f3f3]">
           <div className=" border-black border-[1px]"></div>
           <div className="mx-auto max-w-7xl px-4 py-3 sm:flex sm:items-center sm:px-6 lg:px-8">
             <h3 className="text-sm font-medium text-black">
@@ -318,8 +318,8 @@ export default function CategoryFilter() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </section>
     </div>
   );
