@@ -1,10 +1,47 @@
+import Image from "next/image";
+
+const jobIcon = [
+  {
+    type: "Finance",
+    icon: "/finance.png",
+  },
+  {
+    type: "Marketing",
+    icon: "/marketing.png",
+  },
+  {
+    type: "IT Services",
+    icon: "/IT.png",
+  },
+  {
+    type: "Tech",
+    icon: "/tech.png",
+  },
+  {
+    type: "Science",
+    icon: "/science.png",
+  },
+  {
+    type: "Hospitality",
+    icon: "/hospitality.png",
+  },
+  {
+    type: "Sales",
+    icon: "/sales.png",
+  },
+];
+
 export default function DiscoverJobsCard(props) {
   return (
     <div className="flex divide-y divide-gray-200 rounded-lg bg-white shadow p-6 border-2 border-black transition mx-32 mb-6">
       <div className="flex gap-4 w-full">
         <div className="flex flex-col">
           <div className="flex pb-4 pt-6 gap-4">
-            <img className="h-12 w-12 rounded-md" src={props.imageUrl} alt="" />
+            <img
+              className="h-12 w-12 rounded-md"
+              src={jobIcon.find((icon) => icon.type == props.jobCategory)?.icon}
+              alt=""
+            />
             <div className="flex flex-col">
               {" "}
               <h3 className="truncate text-2xl font-semibold text-gray-900">

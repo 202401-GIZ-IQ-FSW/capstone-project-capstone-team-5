@@ -11,7 +11,7 @@ const employerSchema = new Schema({
   },
   website: {
     type: String,
-    required: true,
+  
     trim: true,
     validate: {
       // Custom validation for website format

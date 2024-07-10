@@ -17,33 +17,24 @@ export default function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="font-heading font-[300]"></div>
             <div className="font-heading font-[300]">
-              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
-                Edit Profile
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400">
+              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white"></h2>
+              <ul className="text-gray-500 dark:text-gray-400 ">
                 <li className="mb-4">
                   <Link
-                    href="/"
-                    className="hover:underline hover:text-[#f1ff52]"
-                  >
-                    Account Details
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link
-                    href="/"
-                    className="hover:underline hover:text-[#f1ff52]"
+                    href="/browse"
+                    className="hover:underline hover:text-[#f1ff52] "
                   >
                     Job Opportunities
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
-                    href="/"
+                    href="/post-job"
                     className="hover:underline hover:text-[#f1ff52]"
                   >
-                    Contact Support
+                    Post a Job Now!
                   </Link>
                 </li>
                 <li className="mb-4">
@@ -51,30 +42,23 @@ export default function Footer() {
                     href="/"
                     className="hover:underline hover:text-[#f1ff52]"
                   >
-                    Company News
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="font-heading font-[300]">
-              <h2 className="mb-6 text-sm font-semibold text-gray-300 uppercase dark:text-white">
-                Community
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 ">
-                <li className="mb-4">
-                  <Link
-                    href="/"
-                    className="hover:underline hover:text-[#f1ff52] "
-                  >
-                    Support Center
+                    Home Page
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
-                    href="/"
+                    href="/about-us"
                     className="hover:underline hover:text-[#f1ff52]"
                   >
-                    Upgrade to Premium
+                    About Us
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    href="/contact-us"
+                    className="hover:underline hover:text-[#f1ff52]"
+                  >
+                    Contact Us
                   </Link>
                 </li>
               </ul>
