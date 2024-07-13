@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Nav from "@/components/Common/navbar";
-import Team from "@/components/about-jobconnect/team";
+import JobInfo from "@/components/jobInformation/job-info";
 import Footer from "@/components/Common/footer";
 
-
-export default function AboutJobConnect() {
+export default function jobInfoPage() {
   return (
     <main className="bg-[#f5f3f3] h-screen">
       <Nav />
-      <Team />
-      
+      <JobInfo />
       <Footer />
     </main>
   );

@@ -3,7 +3,7 @@ import Nav from "@/components/Common/navbar";
 import Team from "@/components/AboutUs/team";
 import Footer from "@/components/Common/footer";
 
-export default function AboutUs() {
+export default function AboutUsPage() {
   return (
     <main className="bg-[#f5f3f3] h-screen">
       <Nav />

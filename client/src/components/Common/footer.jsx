@@ -211,7 +211,7 @@ export default function Footer() {
                     </svg>
                   </a>
                 </li>
-				<li className="mb-4 flex">
+                <li className="mb-4 flex">
                   Sajad Ismael
                   <a
                     href="https://github.com/candourist"
