@@ -6,7 +6,9 @@ const jobController = {};
 jobController.all = async (req, res) => {
   try {
     const { category } = req.query;
-    const jobs = await Job.find(category && category !== "AllJobs" ? { jobCategory: category } : {});
+    const jobs = await Job.find(
+      category && category !== "AllJobs" ? { jobCategory: category } : {}
+    );
     res.json(jobs);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -21,6 +23,7 @@ jobController.findById = async (req, res) => {
     if (!job) {
       return res.status(404).json({ message: "Job not found" });
     }
+    console.log(id);
     res.status(200).json(job);
   } catch (err) {
     res.status(500).json({ message: err.message });

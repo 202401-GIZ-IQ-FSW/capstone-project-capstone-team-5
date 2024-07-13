@@ -62,11 +62,11 @@ export default function DiscoverJobsCard(props) {
                 </div>
               ))}
             </div>
-            <Link href="/job-info">
+            <a href={`/job-info/${props.jobId}`}>
               <button className="bg-[#80e6ff] rounded-md hover:bg-[#f1ff52] hover:text border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3">
                 Apply Now
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

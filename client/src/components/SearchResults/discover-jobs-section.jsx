@@ -37,6 +37,7 @@ function DiscoverJobsSection(props) {
                   company={job.companyName}
                   description={job.jobDescription}
                   tags={job.tags}
+                  jobId={job._id}
                 />
               );
             })}

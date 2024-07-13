@@ -299,12 +299,12 @@ export default function Form() {
             />
           </div>
         </div>
-        <p className="px-36 pt-10 pb-4 text-3xl font-semibold">
+        {/* <p className="px-36 pt-10 pb-4 text-3xl font-semibold">
           {" "}
           Submission Options{" "}
-        </p>
-        <div className="px-36 pt-2 pb-36 flex w-full justify-between items-center">
-          <button
+        </p> */}
+        <div className="px-36 pt-2 pb-36 flex mt-4 w-full justify-end items-end">
+          {/* <button
             type="button"
             className="bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52]"
           >
@@ -315,7 +315,7 @@ export default function Form() {
             className="bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52]"
           >
             Preview Job Listing
-          </button>
+          </button> */}
           <button
             type="submit"
             className="bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
