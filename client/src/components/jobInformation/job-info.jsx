@@ -138,7 +138,7 @@ export default function JobInfo(props) {
                     </button>
                   </Link>
                   <a
-                    href="https://youtu.be/oKlADkHwwmc?si=hh1lHQ_jAhEAc4-M&t=9"
+                    href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
                     target="_blank"
                   >
                     <button className="bg-[#f1ff52] mt-8 rounded-md hover:bg-black hover:text-[#f1ff52] border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3">
