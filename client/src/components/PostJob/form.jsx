@@ -22,7 +22,7 @@ export default function Form() {
     requiredCertifications: "",
     requiredSkills: "",
     jobLocation: "",
-    applicationMethod: "",
+    applicationInstructions: "",
     applicationDeadline: "",
   });
 
@@ -54,7 +54,7 @@ export default function Form() {
               value={formData.title}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Job Title"
+              placeholder="Marketing Specialist"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ export default function Form() {
               value={formData.jobDescription}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Job Description"
+              placeholder="We're looking for a talented and dedicated Marketing Specialist to join... etc."
             />
           </div>
           {/* <JobTypeDropdown /> */}
@@ -136,7 +136,7 @@ export default function Form() {
               onChange={handleChange}
               required
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Company Name"
+              placeholder="Microsoft Co."
             />
           </div>
           <div>
@@ -157,7 +157,7 @@ export default function Form() {
               value={formData.companyDescription}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Company Description"
+              placeholder="Microsoft Corporation is an American multinational corporation and tech... etc."
             />
           </div>
           <div>
@@ -191,13 +191,36 @@ export default function Form() {
           <div>
             <label className="text-sm m-1">Education Level</label>
             <input
-              name="educationLevel"
+              name="certifications"
               value={formData.educationLevel}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Minimum Education Level"
+              placeholder=" Bachelor's degree in Computer Science"
             />
           </div>
+          {/* <div>
+            <label className="text-sm m-1">Education Level</label>
+            <select
+              onInput={function addTag(value) {
+                formData.experienceLevel = value.target.value;
+                console.log(formData.educationLevel);
+              }}
+              onChange={handleChange}
+              name="educationLevel"
+              value={formData.educationLevel}
+              className="block w-full rounded-md border-2 px-3 py-2 text-gray-900 shadow-sm  border-black placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
+            >
+              <option value="" selected disabled hidden>
+                Choose
+              </option>
+              <option>No Education</option>
+              <option>Elementary</option>
+              <option>Highschool</option>
+              <option>Bachelor's</option>
+              <option>Master's</option>
+              <option>PHD</option>
+            </select>
+          </div> */}
           <div>
             <label className="text-sm m-1">Experience Level</label>
             <select
@@ -235,7 +258,7 @@ export default function Form() {
               value={formData.skills}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Required Skills"
+              placeholder="Communication Skills, Organization Skills, Teamwork Skills... etc. "
             />
           </div>
         </div>
@@ -251,17 +274,17 @@ export default function Form() {
               value={formData.jobLocation}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Job Location"
+              placeholder="Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584-5678"
             />
           </div>
           <div>
-            <label className="text-sm m-1">Application Method</label>
+            <label className="text-sm m-1">Application Instructions</label>
             <input
-              name="applicationMethod"
-              value={formData.applicationMethod}
+              name="applicationInstructions"
+              value={formData.applicationInstructions}
               onChange={handleChange}
               className="block w-full rounded-md border-2 px-3 py-1.5 text-gray-900 shadow-sm border-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#80e6ff] sm:text-sm sm:leading-6"
-              placeholder="Application Method"
+              placeholder="Please send your resume and cover letter to hr@techsolutions.com"
             />
           </div>
           <div>

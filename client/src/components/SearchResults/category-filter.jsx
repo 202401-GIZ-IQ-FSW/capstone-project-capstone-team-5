@@ -218,7 +218,7 @@ export default function CategoryFilter() {
               Filters
             </button>
 
-            {/* <div className="hidden sm:block">
+            <div className="hidden sm:block">
               <div className="flow-root">
                 <PopoverGroup className="-mx-4 flex items-center divide-x divide-gray-200">
                   {filters.map((section, sectionIdx) => (
@@ -266,12 +266,11 @@ export default function CategoryFilter() {
                     </Popover>
                   ))}
                 </PopoverGroup>
-              </div> */}
-            {/* </div> */}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Active filters */}
         <div></div>
         {/* <div className="bg-[#f5f3f3]">
           <div className=" border-black border-[1px]"></div>

@@ -81,7 +81,7 @@ const jobSchema = new Schema({
     trim: true,
     maxlength: 100,
   },
-  applicationMethod: {
+  applicationInstructions: {
     type: String,
     trim: true,
     maxlength: 100,
