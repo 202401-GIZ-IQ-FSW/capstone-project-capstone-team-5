@@ -109,12 +109,12 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-opacity-80 bg-gradient-to-r from-yellow-300 via-blue-300 to-black shadow-lg rounded-lg my-28">
+    <div className="max-w-7xl mx-auto p-8 bg-opacity-80 bg-[#f5f3f3]  custom-shadow-color shadow-xl rounded-lg my-20">
       <div className="flex">
         <div className="w-1/3">
           <div className="relative">
             <img
-              className="h-48 w-48 rounded-full object-cover mx-auto"
+              className="h-48 w-48 rounded-lg object-cover mx-auto"
               src={
                 profilePic
                   ? URL.createObjectURL(profilePic)
@@ -154,31 +154,31 @@ const ProfileCard = () => {
         <div className="w-2/3 pl-8">
           {editing ? (
             <div className="w-full">
-              <div className="text-center mb-4">
-                <label className="block text-gray-700">Name</label>
+              <div className="text-left mb-4">
+                <label className="block text-gray-700">Full Name</label>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-center"
+                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-left"
                 />
               </div>
-              <div className="text-center mb-4">
+              <div className="text-left mb-4">
                 <label className="block text-gray-700">Job Title</label>
                 <input
                   type="text"
                   value={jobTitle}
                   onChange={(e) => setJobTitle(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-center"
+                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-left"
                 />
               </div>
-              <div className="text-center mb-4">
+              <div className="text-left mb-4">
                 <label className="block text-gray-700">Location</label>
                 <input
                   type="text"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-center"
+                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none text-left"
                 />
               </div>
 
@@ -242,15 +242,16 @@ const ProfileCard = () => {
                     ></textarea>
                     <button
                       onClick={() => handleRemoveField(field.id)}
-                      className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md"
+                      className="bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                     >
-                      Remove
+                      Remove            
+
                     </button>
                   </div>
                 ))}
                 <button
                   onClick={handleAddField}
-                  className="mt-4 px-4 py-2 bg-green-500 text-white rounded-md"
+                  className="mt-4  bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                 >
                   Add Field
                 </button>
@@ -319,16 +320,16 @@ const ProfileCard = () => {
                         rows="3"
                       ></textarea>
                     </div>
-                    <div className="mt-4 flex justify-end">
+                    <div className="mt-4 flex justify-end ">
                       <button
                         onClick={() => handleEditExperience(exp.id, { title: "Updated Title" })}
-                        className="px-4 py-2 bg-[#80e6ff] text-white rounded-md mr-2 hover:bg-[#f1ff52]"
+                        className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                       >
                         Edit
                       </button>
                       <button
                         onClick={() => handleRemoveExperience(exp.id)}
-                        className="px-4 py-2 bg-red-500 text-white rounded-md"
+                        className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                       >
                         Remove
                       </button>
@@ -337,7 +338,7 @@ const ProfileCard = () => {
                 ))}
                 <button
                   onClick={handleAddExperience}
-                  className="mt-4 px-4 py-2 bg-green-500 text-white rounded-md"
+                  className="mt-4 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                 >
                   Add Experience
                 </button>
@@ -346,28 +347,23 @@ const ProfileCard = () => {
               <div className="mt-4 flex justify-end">
                 <button
                   onClick={handleSave}
-                  className="px-4 py-2 bg-[#80e6ff] text-white rounded-md mr-2 hover:bg-[#f1ff52]"
+                  className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                 >
                   Save
                 </button>
                 <button
                   onClick={handleCancel}
-                  className="px-4 py-2 bg-gray-300 rounded-md"
+                  className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                 >
                   Cancel
                 </button>
               </div>
             </div>
           ) : (
-            <div className="text-center">
+            <div className="text-left">
               <h2 className="text-2xl font-bold text-gray-700">
                 {name}{" "}
-                <button
-                  onClick={handleEditClick}
-                  className="text-blue-500 underline"
-                >
-                  Edit
-                </button>
+                
               </h2>
               <p className="text-gray-600">{jobTitle}</p>
               <p className="text-gray-600">{location}</p>
@@ -376,7 +372,15 @@ const ProfileCard = () => {
                   <strong>{field.label}: </strong>
                   {field.value}
                 </div>
+                
               ))}
+              <button
+                  onClick={handleEditClick}
+                  className=" ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
+
+                >
+                  Edit Profile
+                </button>
             </div>
           )}
         </div>
@@ -394,7 +398,7 @@ const ProfileCard = () => {
               </div>
               <button
                 onClick={() => handleRemoveSavedJob(job.id)}
-                className="px-4 py-2 bg-red-500 text-white rounded-md"
+                className= "ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
               >
                 Remove
               </button>
@@ -407,7 +411,7 @@ const ProfileCard = () => {
       <div className="mt-8 w-full">
         <h3 className="text-xl font-bold text-gray-700">Experience</h3>
         {experience.map((exp) => (
-          <div key={exp.id} className="mt-4 bg-white rounded-md shadow-md p-4 w-full">
+          <div key={exp.id} className="mt-4 bg-[#f5f3f3]  custom-shadow-color shadow-xl p-4 w-full rounded-lg">
             <h2 className="text-gray-700">{exp.title} at {exp.company}</h2>
             <h3 className="text-gray-600">Start Date: {exp.startDate} - End Date: {exp.endDate}</h3>
             <p className="text-gray-600">{exp.description}</p>
