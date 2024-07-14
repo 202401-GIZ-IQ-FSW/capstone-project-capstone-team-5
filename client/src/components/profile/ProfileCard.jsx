@@ -42,11 +42,15 @@ const ProfileCard = () => {
     },
   ]);
   const [customFields, setCustomFields] = useState([
-    { id: 5, label: "Date of Graduation", value: "" },
-    { id: 6, label: "Date of Birth", value: "" },
-    { id: 7, label: "University", value: "" },
-    { id: 8, label: "Department", value: "" },
-    { id: 9, label: "Skills", value: "" },
+    { id: 5, label: "Date of Graduation", value: "01/07/2024" },
+    { id: 6, label: "Date of Birth", value: "26/07/1999" },
+    {
+      id: 7,
+      label: "University",
+      value: "   Koya University",
+    },
+    { id: 8, label: "Department", value: "Software Engineering" },
+    { id: 9, label: "Skills", value: "Web Development" },
   ]);
 
   const handleEditClick = () => setEditing(true);
@@ -109,16 +113,14 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-8 bg-opacity-80 bg-[#f5f3f3]  custom-shadow-color shadow-xl rounded-lg my-20">
+    <div className="max-w-7xl mx-auto p-8 bg-opacity-80 bg-[#f5f3f3]  border-black border-2 rounded-lg my-20">
       <div className="flex">
         <div className="w-1/3">
           <div className="relative">
             <img
-              className="h-48 w-48 rounded-lg object-cover mx-auto"
+              className="h-64 w-64 rounded-full object-cover mx-auto"
               src={
-                profilePic
-                  ? URL.createObjectURL(profilePic)
-                  : "/default-profile-pic.jpg"
+                profilePic ? URL.createObjectURL(profilePic) : "/barham.jpeg"
               }
               alt="Profile"
             />
@@ -183,7 +185,7 @@ const ProfileCard = () => {
               </div>
 
               <div className="mt-4">
-                <h3 className="text-xl font-bold text-gray-700">Custom Fields</h3>
+                <h3 className="text-sm text-gray-700">Custom Fields</h3>
                 {customFields.map((field) => (
                   <div key={field.id} className="mt-2">
                     <label className="block text-gray-700">Label</label>
@@ -231,11 +233,17 @@ const ProfileCard = () => {
                         className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                       />
                     )}
-                    <label className="block text-gray-700 mt-2">Description</label>
+                    <label className="block text-gray-700 mt-2">
+                      Description
+                    </label>
                     <textarea
                       value={field.description}
                       onChange={(e) =>
-                        handleFieldChange(field.id, "description", e.target.value)
+                        handleFieldChange(
+                          field.id,
+                          "description",
+                          e.target.value
+                        )
                       }
                       className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                       rows="3"
@@ -244,8 +252,7 @@ const ProfileCard = () => {
                       onClick={() => handleRemoveField(field.id)}
                       className="bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                     >
-                      Remove            
-
+                      Remove
                     </button>
                   </div>
                 ))}
@@ -260,7 +267,10 @@ const ProfileCard = () => {
               <div className="mt-4">
                 <h3 className="text-xl font-bold text-gray-700">Experience</h3>
                 {experience.map((exp) => (
-                  <div key={exp.id} className="mt-4 bg-white rounded-md shadow-md p-4 w-full">
+                  <div
+                    key={exp.id}
+                    className="mt-4 bg-white rounded-md   border-black border-2 p-4 w-full"
+                  >
                     <div className="flex justify-between items-center">
                       <div>
                         <label className="block text-gray-700">Title</label>
@@ -268,7 +278,11 @@ const ProfileCard = () => {
                           type="text"
                           value={exp.title}
                           onChange={(e) =>
-                            handleExperienceChange(exp.id, "title", e.target.value)
+                            handleExperienceChange(
+                              exp.id,
+                              "title",
+                              e.target.value
+                            )
                           }
                           className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                         />
@@ -279,7 +293,11 @@ const ProfileCard = () => {
                           type="text"
                           value={exp.company}
                           onChange={(e) =>
-                            handleExperienceChange(exp.id, "company", e.target.value)
+                            handleExperienceChange(
+                              exp.id,
+                              "company",
+                              e.target.value
+                            )
                           }
                           className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                         />
@@ -287,12 +305,18 @@ const ProfileCard = () => {
                     </div>
                     <div className="mt-4 flex justify-between items-center">
                       <div>
-                        <label className="block text-gray-700">Start Date</label>
+                        <label className="block text-gray-700">
+                          Start Date
+                        </label>
                         <input
                           type="text"
                           value={exp.startDate}
                           onChange={(e) =>
-                            handleExperienceChange(exp.id, "startDate", e.target.value)
+                            handleExperienceChange(
+                              exp.id,
+                              "startDate",
+                              e.target.value
+                            )
                           }
                           className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                         />
@@ -303,7 +327,11 @@ const ProfileCard = () => {
                           type="text"
                           value={exp.endDate}
                           onChange={(e) =>
-                            handleExperienceChange(exp.id, "endDate", e.target.value)
+                            handleExperienceChange(
+                              exp.id,
+                              "endDate",
+                              e.target.value
+                            )
                           }
                           className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                         />
@@ -314,7 +342,11 @@ const ProfileCard = () => {
                       <textarea
                         value={exp.description}
                         onChange={(e) =>
-                          handleExperienceChange(exp.id, "description", e.target.value)
+                          handleExperienceChange(
+                            exp.id,
+                            "description",
+                            e.target.value
+                          )
                         }
                         className="w-full border border-gray-300 rounded-md p-2 focus:outline-none"
                         rows="3"
@@ -322,7 +354,11 @@ const ProfileCard = () => {
                     </div>
                     <div className="mt-4 flex justify-end ">
                       <button
-                        onClick={() => handleEditExperience(exp.id, { title: "Updated Title" })}
+                        onClick={() =>
+                          handleEditExperience(exp.id, {
+                            title: "Updated Title",
+                          })
+                        }
                         className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
                       >
                         Edit
@@ -361,10 +397,7 @@ const ProfileCard = () => {
             </div>
           ) : (
             <div className="text-left">
-              <h2 className="text-2xl font-bold text-gray-700">
-                {name}{" "}
-                
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-700">{name} </h2>
               <p className="text-gray-600">{jobTitle}</p>
               <p className="text-gray-600">{location}</p>
               {customFields.map((field) => (
@@ -372,20 +405,11 @@ const ProfileCard = () => {
                   <strong>{field.label}: </strong>
                   {field.value}
                 </div>
-                
               ))}
-              <button
-                  onClick={handleEditClick}
-                  className=" ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
-
-                >
-                  Edit Profile
-                </button>
             </div>
           )}
         </div>
       </div>
-
       <div className="mt-8">
         <h3 className="text-xl font-bold text-gray-700">Saved Jobs</h3>
         <ul className="mt-4">
@@ -398,7 +422,7 @@ const ProfileCard = () => {
               </div>
               <button
                 onClick={() => handleRemoveSavedJob(job.id)}
-                className= "ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
+                className="ml-2 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
               >
                 Remove
               </button>
@@ -406,18 +430,30 @@ const ProfileCard = () => {
           ))}
         </ul>
       </div>
-
       {/* Display Experience Section */}
       <div className="mt-8 w-full">
         <h3 className="text-xl font-bold text-gray-700">Experience</h3>
         {experience.map((exp) => (
-          <div key={exp.id} className="mt-4 bg-[#f5f3f3]  custom-shadow-color shadow-xl p-4 w-full rounded-lg">
-            <h2 className="text-gray-700">{exp.title} at {exp.company}</h2>
-            <h3 className="text-gray-600">Start Date: {exp.startDate} - End Date: {exp.endDate}</h3>
+          <div
+            key={exp.id}
+            className="mt-4 bg-[#f5f3f3]   border-black border-2 p-4 w-full rounded-lg"
+          >
+            <h2 className="text-gray-700">
+              {exp.title} at {exp.company}
+            </h2>
+            <h3 className="text-gray-600">
+              Start Date: {exp.startDate} - End Date: {exp.endDate}
+            </h3>
             <p className="text-gray-600">{exp.description}</p>
           </div>
         ))}
-      </div>
+      </div>{" "}
+      <button
+        onClick={handleEditClick}
+        className=" mt-8 bg-[#80e6ff] rounded-md border-black border-2 transition-all font-medium px-6 py-2 h-10 items-center leading-3 hover:bg-[#f1ff52] disabled:bg-gray-200"
+      >
+        Edit Profile
+      </button>
     </div>
   );
 };
