@@ -2,8 +2,8 @@ import { FeaturedEmployersCards } from "@/constants/featured-employer-cards";
 
 function FeaturedEmployersCard(props) {
   return (
-    <div className=" flex flex-col w-[260px] rounded-lg bg-gray-50 hover:bg-white shadow p-6 justify-between border-2 border-black  hover:transform hover:-translate-y-2 transition hover:shadow-xl hover:cursor-pointer group">
-      <div className="flex flex-col justify-center p-2 items-center gap-6">
+    <div className=" flex flex-col text-black w-[260px] rounded-lg bg-gray-50 hover:bg-white shadow p-6 justify-between border-2 border-black  hover:transform hover:-translate-y-2 transition hover:shadow-xl hover:cursor-pointer group">
+      <div className="flex flex-col  text-black justify-center p-2 items-center gap-6">
         <img className="h-16 w-16 " src={props.imageUrl} alt="" />
         <div className="flex flex-col gap-1 text-center">
           <h3 className="font-semibold text-xl"> {props.title}</h3>

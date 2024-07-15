@@ -31,7 +31,7 @@ export default function Search(props) {
         </form>
       </div>
       <div>
-        <div className="grid grid-cols-2 lg:grid-cols-8 items-center justify-center p-8 lg:px-36 gap-3">
+        <div className="grid text-black grid-cols-2 lg:grid-cols-8 items-center justify-center p-8 lg:px-36 gap-3">
           <button
             onClick={() => {
               window.location.href = "?category=AllJobs";

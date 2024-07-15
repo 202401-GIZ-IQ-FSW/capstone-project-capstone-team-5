@@ -34,7 +34,7 @@ const jobIcon = [
 
 export default function DiscoverJobsCard(props) {
   return (
-    <div className="flex divide-y divide-gray-200 rounded-lg bg-white shadow p-6 border-2 border-black transition mx-32 mb-6">
+    <div className="flex text-black divide-y divide-gray-200 rounded-lg bg-white shadow p-6 border-2 border-black transition mx-32 mb-6">
       <div className="flex gap-4 w-full">
         <div className="flex flex-col">
           <div className="flex pb-4 pt-6 gap-4">
